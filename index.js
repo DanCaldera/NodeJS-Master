@@ -1,24 +1,40 @@
-var mathLib = require('./lib/math')
-var jokesLib = require('./lib/jokes')
+// Primary file
 
-var app = {}
+//* Dependencies
+var http = require('http')
+var url = require('url')
 
-app.config = {
-  timeBetweenJokes: 1000,
-}
+//* The server should respond to all requests with a string
+var server = http.createServer(function (req, res) {
+  // Get the url and parse it
+  var parsedUrl = url.parse(req.url, true)
 
-app.printJoke = function () {
-  var allJokes = jokesLib.allJokes()
+  // Get the path
+  var path = parsedUrl.pathname
+  var trimmedPath = path.replace(/^\/+|\/+$/g, '')
 
-  var numberOfJokes = allJokes.length
+  // Get the query string as an object
+  //TODO Fix this
+  var queryStringObject = parsedUrl.query
 
-  var randomNumber = mathLib.getRandomNumber(1, numberOfJokes)
+  // Get the http method
+  var method = req.method.toLowerCase()
 
-  var selectedJoke = allJokes[randomNumber - 1]
+  // Send the response
+  res.end('Hello World\n')
 
-  console.log(selectedJoke)
-}
+  // Log the request
+  console.log(
+    'Request Received on path: ',
+    trimmedPath,
+    ' with method: ',
+    method,
+    ' and with this queryStringString Parameters: ',
+    queryStringObject
+  )
+})
 
-app.indefiniteLoop = function () {
-  setInterval(app.printJoke, app.config.timeBetweenJokes)
-}
+//* Start the server and keep it listening at port 3005
+server.listen(3005, function () {
+  console.log('The server is listening at port 3005')
+})

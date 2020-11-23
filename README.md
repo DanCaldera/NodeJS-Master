@@ -1,5 +1,7 @@
 # bio-wolf-js
 
+## Math Example
+
 `var app = {}`
 
 `app.config = {`
