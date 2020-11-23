@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "testing bio-wolf",
+  "main": "index.js",
+  "scripts": {
+    "dev": "DEBUG=app:* nodemon ./index.js",
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Caldera",
+  "license": "ISC",
+  "dependencies": {
+    "bio-wolf-js": "https://github.com/DanCaldera/bio-wolf-js.git"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
