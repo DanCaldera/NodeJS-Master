@@ -1,0 +1,33 @@
+{
+  "name": "bio-wolf",
+  "version": "1.0.0",
+  "description": "Pack of Functions for biomedical analysis",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanCaldera/bio-wolf-js.git"
+  },
+  "keywords": [
+    "Biomedical",
+    "Fourier",
+    "image",
+    "signal",
+    "processing"
+  ],
+  "author": "Daniel Caldera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanCaldera/bio-wolf-js/issues"
+  },
+  "homepage": "https://github.com/DanCaldera/bio-wolf-js#readme",
+  "dependencies": {
+    "multer": "^1.4.2"
+  }
+}
